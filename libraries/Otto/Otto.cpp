@@ -621,40 +621,40 @@ int Otto::getNoise(){
 //---------------------------------------------------------
 //-- Otto getBatteryLevel: return battery voltage percent
 //---------------------------------------------------------
-double Otto::getBatteryLevel(){
+// double Otto::getBatteryLevel(){
 
-  //The first read of the batery is often a wrong reading, so we will discard this value. 
-    double batteryLevel = battery.readBatPercent();
-    double batteryReadings = 0;
-    int numReadings = 10;
+//   //The first read of the batery is often a wrong reading, so we will discard this value. 
+//     double batteryLevel = battery.readBatPercent();
+//     double batteryReadings = 0;
+//     int numReadings = 10;
 
-    for(int i=0; i<numReadings; i++){
-        batteryReadings += battery.readBatPercent();
-        delay(1); // delay in between reads for stability
-    }
+//     for(int i=0; i<numReadings; i++){
+//         batteryReadings += battery.readBatPercent();
+//         delay(1); // delay in between reads for stability
+//     }
 
-    batteryLevel = batteryReadings / numReadings;
+//     batteryLevel = batteryReadings / numReadings;
 
-    return batteryLevel;
-}
+//     return batteryLevel;
+// }
 
 
-double Otto::getBatteryVoltage(){
+// double Otto::getBatteryVoltage(){
 
-  //The first read of the batery is often a wrong reading, so we will discard this value. 
-    double batteryLevel = battery.readBatVoltage();
-    double batteryReadings = 0;
-    int numReadings = 10;
+//   //The first read of the batery is often a wrong reading, so we will discard this value. 
+//     double batteryLevel = battery.readBatVoltage();
+//     double batteryReadings = 0;
+//     int numReadings = 10;
 
-    for(int i=0; i<numReadings; i++){
-        batteryReadings += battery.readBatVoltage();
-        delay(1); // delay in between reads for stability
-    }
+//     for(int i=0; i<numReadings; i++){
+//         batteryReadings += battery.readBatVoltage();
+//         delay(1); // delay in between reads for stability
+//     }
 
-    batteryLevel = batteryReadings / numReadings;
+//     batteryLevel = batteryReadings / numReadings;
 
-    return batteryLevel;
-}
+//     return batteryLevel;
+// }
 
 
 ///////////////////////////////////////////////////////////////////

@@ -6,7 +6,7 @@
 #include <EEPROM.h>
 
 #include <US.h>
-#include <BatReader.h>
+// #include <BatReader.h>
 
 #include "Otto_mouths.h"
 #include "Otto_sounds.h"
@@ -97,7 +97,7 @@ class Otto
   private:
     
     // LedMatrix ledmatrix;
-    BatReader battery;
+    // BatReader battery;
     Oscillator servo[4];
     US us;
 

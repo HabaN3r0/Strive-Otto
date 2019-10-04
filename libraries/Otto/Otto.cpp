@@ -6,7 +6,7 @@
   #include <pins_arduino.h>
 #endif
 
-
+#include <Servo.h>
 #include "Otto.h"
 #include <Oscillator.h>
 #include <US.h>
@@ -236,42 +236,25 @@ void Otto::walk(float steps, int T, int dir){
 }
 
 void Otto::walk2(){
-  // int motion1[4] = {90, 90, 90, 90};
-  // _moveServos(500, motion1);
-  int motion2[4] = {125, 125, 35 , 60};
-  _moveServos(1000, motion2);
-  int motion3[4] = {45, 45, 35, 60};
-  _moveServos(500, motion3);
-  int motion4[4] = {45, 45, 100 , 125};
-  _moveServos(1000, motion4);
-  int motion5[4] = {125, 125, 100 , 125};
-  _moveServos(500, motion5);
+  
+  // {left hip angle, right hip angle, left foot angle, right foot angle}
 
-  //   int motion2[4] = {125, 125, 55 , 70};
+
+  int motion1[4] = {90, 90, 90, 90};
+  _moveServos(500, motion1);
+  int motion2[4] = {125, 125, 125, 125};
+  _moveServos(800, motion2);
+  // int motion2[4] = {125, 125, 35 , 60};
   // _moveServos(1000, motion2);
-  // int motion3[4] = {45, 45, 55, 70};
+  // int motion3[4] = {45, 45, 35, 60};
   // _moveServos(500, motion3);
-  // int motion4[4] = {45, 45, 110 , 125};
+  // int motion4[4] = {45, 45, 100 , 125};
   // _moveServos(1000, motion4);
-  // int motion5[4] = {125, 125, 110 , 125};
+  // int motion5[4] = {125, 125, 100 , 125};
   // _moveServos(500, motion5);
 
     // detachServos();
     // isOttoResting=true;c
-}
-
-
-void Otto::walk3(){
-  // int motion1[4] = {90, 90, 90, 90};
-  // _moveServos(500, motion1);
-  int motion2[4] = {45, 45, 100 , 125};
-  _moveServos(1000, motion2);
-  int motion3[4] = {125, 125, 100, 125};
-  _moveServos(500, motion3);
-  int motion4[4] = {125, 125, 55 , 80};
-  _moveServos(1000, motion4);
-  int motion5[4] = {45, 45, 55, 80};
-  _moveServos(500, motion5);
 }
 
 //---------------------------------------------------------

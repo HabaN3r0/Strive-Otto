@@ -5,7 +5,6 @@
 //-----------------------------------------------------------------
 //-- Otto will avoid obstacles with this code!
 //-----------------------------------------------------------------
-#include <Servo.h> 
 #include <Oscillator.h>
 #include <US.h>
 #include <Otto.h>
@@ -41,6 +40,9 @@ int moveSize=15;         //Asociated with the height of some movements
 //---------------------------------------------------------
 bool obstacleDetected = false;
 
+
+int loopCount;
+
 ///////////////////////////////////////////////////////////////////
 //-- Setup ------------------------------------------------------//
 ///////////////////////////////////////////////////////////////////
@@ -58,10 +60,13 @@ void setup(){
 //-- Principal Loop ---------------------------------------------//
 ///////////////////////////////////////////////////////////////////
 void loop() {
-//Otto.walk(4,500,-1);  
-  Otto.walk2();
-//while(1);
-  }  
+  while(loopCount != 2)
+  {
+    Otto.walk2();
+    loopCount++;
+  }
+   
+}  
 
 //////////////////////////////////////////////////////////////////////////////////
 //-- Function to read distance sensor & to actualize obstacleDetected variable //
